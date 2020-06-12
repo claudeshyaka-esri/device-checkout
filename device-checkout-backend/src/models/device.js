@@ -5,15 +5,18 @@ const Device = mongoose.model('Device', {
     device_type:{
         type: String,
         required: true,
+        trim: true,
     },
     name:{
         type: String,
         required: true,
+        trim: true,
     },
-    operating_system: {
+    operating_system:{
         type: String, 
+        trim: true,
     },
-    has_bluetooth: {
+    has_bluetooth:{
         type: Boolean,
         default: false,
     },
@@ -25,19 +28,18 @@ const Device = mongoose.model('Device', {
         type: Boolean,
         default: false,
     },
-    has_gps: {
+    has_gps:{
         type: Boolean,
         default: false,
     },
-    memory: {
+    memory:{
         type: Number,
+        default: null,
     },
     serial_number:{
         type: String,
         required: true,
-    },
-    image: {
-        type: Buffer,
+        trim: true,
     },
 })
 
