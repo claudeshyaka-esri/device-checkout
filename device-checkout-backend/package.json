@@ -1,5 +1,5 @@
 {
-  "name": "device-checkout",
+  "name": "device-checkout-backend",
   "version": "1.0.0",
   "description": "ESS Device checkout web app backend",
   "main": "app.js",
