@@ -1,3 +1,5 @@
+import "./styles.css";
+
 import React from "react";
 
 //components
@@ -7,8 +9,6 @@ import NavBar from "./components/NavBar";
 import { Button } from "reactstrap";
 
 const App = () => {
-  const buttonText = "Click Me!";
-
   return (
     <div>
       <NavBar />
