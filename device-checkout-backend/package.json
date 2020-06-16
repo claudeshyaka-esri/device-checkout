@@ -1,0 +1,21 @@
+{
+  "name": "device-checkout-backend",
+  "version": "1.0.0",
+  "description": "ESS Device checkout web app backend",
+  "main": "index.js",
+  "scripts": {
+    "start":"node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "Claude and Jose",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.9",
+    "mongoose": "^5.9.18",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
