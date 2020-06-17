@@ -42,6 +42,14 @@ router.get('/devices/:id', async (req, res) => {
 
 // device updating endpoint
 router.patch('devices/:id', async (req, res) => {
+    // added field vaidation
+
+    // ensure updated device exit
+
+    // update device
+
+    // catch any errors.
+    
     res.send('update device endpoint.')
 })
 
