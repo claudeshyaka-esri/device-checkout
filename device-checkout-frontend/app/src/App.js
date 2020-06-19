@@ -7,11 +7,13 @@ import NavBar from "./components/NavBar";
 import RegionHero from "./components/RegionHero";
 
 // react strap components
+import ShowLocation from "./components/ShowLocation";
 
 const App = () => {
   return (
     <div>
       <NavBar />
+      <ShowLocation />
       <RegionHero
         img={process.env.PUBLIC_URL + "./one-tree.jpg"}
         alt="photo by Mitchell Luo on Unsplash"
