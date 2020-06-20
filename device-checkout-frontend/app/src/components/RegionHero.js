@@ -4,8 +4,6 @@ import "./RegionHero.css";
 import React from "react";
 import LazyHero from "react-lazy-hero";
 
-import ShowLocation from "../components/ShowLocation";
-
 // adding location store from mobx to track the location
 import { observer } from "mobx-react";
 import { useStores } from "../hooks/user-stores";
