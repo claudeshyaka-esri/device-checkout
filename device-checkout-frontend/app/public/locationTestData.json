@@ -1,0 +1,19 @@
+{
+  "locations": [
+    {
+      "name": "Redlands",
+      "numOfDevices": 40,
+      "image": "one-tree.jpg"
+    },
+    {
+      "name": "Charlotte",
+      "numOfDevices": 25,
+      "image": "charlotte.jpg"
+    },
+    {
+      "name": "Norus",
+      "numOfDevices": 10,
+      "image": "norus.jpg"
+    }
+  ]
+}
