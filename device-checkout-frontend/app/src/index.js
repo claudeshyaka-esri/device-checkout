@@ -6,7 +6,8 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 // components
-import App from "./App";
+//import App from "./App";
+import App2 from "./components/App2";
 
 // take the react component and render on the screen
-ReactDOM.render(<App />, document.querySelector("#root"));
+ReactDOM.render(<App2 />, document.querySelector("#root"));

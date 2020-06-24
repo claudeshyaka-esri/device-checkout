@@ -1,0 +1,80 @@
+[
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 128,
+    "_id": "5ee957438a12abb7101173f8",
+    "device_type": "smartphone",
+    "name": "iPhone 11",
+    "operating_system": "iOS 13",
+    "serial_number": "dcwdewd2442c23r4r",
+    "__v": 0
+  },
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 128,
+    "_id": "5ee9574a8a12abb7101173f9",
+    "device_type": "smartphone",
+    "name": "iPhone 10",
+    "operating_system": "iOS 13",
+    "serial_number": "dcwdewd2442c23r4r",
+    "__v": 0
+  },
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 128,
+    "_id": "5ee957688a12abb7101173fa",
+    "device_type": "laptop",
+    "name": "Dell",
+    "operating_system": "windows 10",
+    "serial_number": "dcwdewd2442c23r4r",
+    "__v": 0
+  },
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 128,
+    "_id": "5ee9577f8a12abb7101173fb",
+    "device_type": "laptop",
+    "name": "Macbook",
+    "operating_system": "OSX Sierra",
+    "serial_number": "dcwdewd2442c23r4r",
+    "__v": 0
+  },
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 128,
+    "_id": "5ee957bb8a12abb7101173fc",
+    "device_type": "tablet",
+    "name": "iPad Pro",
+    "operating_system": "iOS 13",
+    "serial_number": "23243dd3d343434dd3e",
+    "__v": 0
+  },
+  {
+    "has_bluetooth": true,
+    "has_camera": true,
+    "has_internet": true,
+    "has_gps": true,
+    "memory": 254,
+    "_id": "5eeba12cb3a3d4c99e79e2d8",
+    "device_type": "smartphone",
+    "name": "iphone 12",
+    "operating_system": "iOS 13",
+    "serial_number": "23243dd3d343434dd3e",
+    "__v": 0
+  }
+]
