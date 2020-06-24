@@ -1,0 +1,11 @@
+div {
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+}
+
+.my-padded {
+  padding: 5px 5px;
+}
