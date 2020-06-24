@@ -1,6 +1,8 @@
 import React from "react";
 import axios from "axios";
 
+import "./App2.css";
+
 //components
 import NavBar from "./NavBar";
 import DeviceResultList from "./DeviceResultList";
@@ -38,7 +40,13 @@ class App2 extends React.Component {
     return (
       <div>
         <NavBar />
-        {loading ? <LoadingSpinner /> : <DeviceResultList devices={devices} />}
+        <div className="result-container">
+          {loading ? (
+            <LoadingSpinner />
+          ) : (
+            <DeviceResultList devices={devices} />
+          )}
+        </div>
       </div>
     );
   }
