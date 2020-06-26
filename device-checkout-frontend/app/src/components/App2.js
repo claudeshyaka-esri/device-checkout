@@ -8,6 +8,7 @@ import NavBar from "./NavBar";
 import DeviceResultList from "./DeviceResultList";
 import LoadingSpinner from "./LoadingSpinner";
 import Search from "./Search";
+import CheckBox from "./CheckBox";
 
 class App2 extends React.Component {
   state = {
@@ -44,6 +45,7 @@ class App2 extends React.Component {
         <div className="ui segment">
           <div style={{ marginLeft: "10%" }}>
             <Search />
+            <CheckBox />
           </div>
         </div>
         <div className="result-container">
