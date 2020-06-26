@@ -6,6 +6,7 @@ p {
   text-align: center;
 }
 
-.my-padded {
-  padding: 5px 5px;
+.card-custom {
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
