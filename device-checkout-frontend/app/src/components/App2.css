@@ -3,6 +3,14 @@
   padding-right: 5%;
 }
 
+.one {
+  float: left;
+}
+
+.two {
+  float: right;
+}
+
 /* .result-container {
   margin-left: 5%;
   margin-right: 5%;

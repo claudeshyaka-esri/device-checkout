@@ -7,12 +7,14 @@ import "./App2.css";
 import NavBar from "./NavBar";
 import DeviceResultList from "./DeviceResultList";
 import LoadingSpinner from "./LoadingSpinner";
-import Search from "./Search";
+import SearchBar from "./SearchBar";
+import CheckBox from "./CheckBox";
 
 class App2 extends React.Component {
   state = {
     devices: [],
     loading: false,
+    searchSource: [],
   };
 
   // load the devices from the initial query
@@ -33,6 +35,21 @@ class App2 extends React.Component {
         }
       });
     });
+
+    // set the search source for the searchBar
+    const searchList = [
+      "iPhone 11",
+      "iPhone 10",
+      "Dell",
+      "MacBook",
+      "iPad Pro",
+      "iPhone 12",
+      "Samsung Galaxy s10",
+      "Samsung Galaxy Tab",
+    ];
+    this.setState({
+      searchSource: searchList,
+    });
   };
 
   render() {
@@ -43,7 +60,8 @@ class App2 extends React.Component {
         <NavBar />
         <div className="ui segment">
           <div style={{ marginLeft: "10%" }}>
-            <Search />
+            <SearchBar source={this.state.searchSource} />
+            {/* <CheckBox /> */}
           </div>
         </div>
         <div className="result-container">
