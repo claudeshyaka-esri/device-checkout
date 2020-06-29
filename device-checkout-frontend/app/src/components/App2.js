@@ -9,6 +9,7 @@ import DeviceResultList from "./DeviceResultList";
 import LoadingSpinner from "./LoadingSpinner";
 import SearchBar from "./SearchBar";
 import CheckBox from "./CheckBox";
+import SearchFilter from "./SearchFilter";
 
 class App2 extends React.Component {
   state = {
@@ -59,9 +60,15 @@ class App2 extends React.Component {
       <div>
         <NavBar />
         <div className="ui segment">
-          <div style={{ marginLeft: "10%" }}>
-            <SearchBar source={this.state.searchSource} />
-            {/* <CheckBox /> */}
+          <div className="ui grid">
+            <div className="twelve wide column">
+              <div style={{ marginLeft: "10%" }}>
+                <SearchBar source={this.state.searchSource} />
+              </div>
+            </div>
+            <div className="two wide column">
+              <SearchFilter />
+            </div>
           </div>
         </div>
         <div className="result-container">

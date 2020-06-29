@@ -3,10 +3,14 @@ import React from "react";
 const CheckBox = () => {
   return (
     <div className="ui form">
+      <label>
+        <b>Availability</b>
+      </label>
+      <br></br>
       <div className="grouped fields">
         <div className="field">
           <div className="ui radio checkbox">
-            <input type="radio" name="available" checked="checked" />
+            <input type="radio" name="available" />
             <label>Available</label>
           </div>
         </div>
