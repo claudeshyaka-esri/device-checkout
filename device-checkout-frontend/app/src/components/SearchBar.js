@@ -14,7 +14,7 @@ class SearchBar extends React.Component {
 
   onInputChange = (event) => {
     const { source } = this.props;
-    let filter, textValue, suggestStr;
+    let textValue;
 
     this.setState(
       {
