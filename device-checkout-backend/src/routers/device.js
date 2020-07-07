@@ -1,5 +1,6 @@
 const express = require('express')
 const Device = require('../models/device')
+const auth = require('../middleware/auth')
 
 const router = new express.Router()
 
@@ -16,9 +17,30 @@ router.post('/devices', async (req, res) => {
 })
 
 // devices reading endpoint
+// GET /devices?location=redlands
+// GET /devices?limit=10&skip=0
 router.get('/devices', async (req, res) => {
+    const match = {}
+
+    //match.location = req.query.location === '' ?  :
+    if(req.query.location){
+        match.location = req.query.location
+    }
+
+    if(req.query.deviceType){
+        match.deviceType = req.query.deviceType
+    }
+
+    if(req.query.name){
+        match.name = req.query.name
+    }
+
     try {
-        const devices = await Device.find({})
+        const devices = await Device.find( match, {}, {
+            limit: parseInt(req.query.limit),
+            skip: parseInt(req.query.skip)
+        })
+
         res.send(devices)
     } catch (e) {
         res.status(500).send()
@@ -28,58 +50,19 @@ router.get('/devices', async (req, res) => {
 // device reading endpoint
 router.get('/devices/:id', async (req, res) => {
     try {
-        const device = await Device.findById(req.params.id)
+        const device = await Device.findOne({
+            _id: req.params.id,
+        })
 
         if(!device){
             res.status(404).send()
         }
 
         res.send(device)
+
     } catch (e) {
         res.status(500).send()
     }
 })
-
-// device updating endpoint
-router.patch('devices/:id', async (req, res) => {
-    // added field vaidation
-
-    // ensure updated device exit
-
-    // update device
-
-    // catch any errors.
-    
-    res.send('update device endpoint.')
-})
-
-// device deletion endpoint
-router.delete('/devices/:id', async (req, res) => {
-    try {
-        const device = await Device.findByIdAndDelete(req.params.id)
-        
-        if(!device){
-            return res.status(404).send()
-        }
-
-        res.send(device)
-    } catch (e) {
-        res.status(500).send()
-    }
-})
-
-// device reading by type endpoint
-// router.get('/devices/:type', async (req, res) => {
-//     const _type = req.params.type
-
-//     try {
-//         const devices = await Device.find({ 
-//             device_type: _type
-//         })
-//         res.send(devices)    
-//     } catch (e) {
-//         res.status(500).send()
-//     }
-// })
 
 module.exports = router

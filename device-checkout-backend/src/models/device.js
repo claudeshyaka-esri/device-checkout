@@ -1,46 +1,78 @@
 const mongoose = require('mongoose')
 const validator = require('validator')
 
-const Device = mongoose.model('Device', {
-    device_type:{
+const deviceSchema = new mongoose.Schema({
+    assetNumber: {
+        type: String
+    },
+    unitNumber: {
+        type: String
+    },
+    deviceType: {
         type: String,
         required: true,
         trim: true,
     },
-    name:{
+    name: {
         type: String,
         required: true,
         trim: true,
     },
-    operating_system:{
+    operatingSystem:{
         type: String, 
         trim: true,
     },
-    has_bluetooth:{
+    hasBluetooth: {
         type: Boolean,
         default: false,
     },
-    has_camera: {
+    hasCamera: {
         type: Boolean,
         default: false,
     },
-    has_internet: {
+    hasInternet: {
         type: Boolean,
         default: false,
     },
-    has_gps:{
+    hasGps: {
         type: Boolean,
         default: false,
     },
-    memory:{
+    memory: {
         type: Number,
         default: null,
     },
-    serial_number:{
+    serialNumber: {
         type: String,
         required: true,
         trim: true,
     },
+    location: {
+        type: String,
+        lowercase: true,
+        required: true,
+        trim: true,
+    },
+    assignedToTask: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'task',
+    },
+    // history:[{
+    //     owner: {
+    //         type: mongoose.Schema.Types.ObjectId,
+    //         ref: 'user'
+    //     },
+    //     checkedOutAt:{
+    //         type: Date
+    //     },
+    //     checkedInAt:{
+    //         type: Date
+    //     }
+    // }],
+}, {
+    timestamps: true
 })
+
+const Device = mongoose.model('Device', deviceSchema)
 
 module.exports = Device
