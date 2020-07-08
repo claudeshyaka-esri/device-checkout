@@ -16,7 +16,7 @@ const taskSchema = new mongoose.Schema({
         required: true,
         ref: 'User',
     },
-    deviceOwned: {
+    checkedOutDevice: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'Device'

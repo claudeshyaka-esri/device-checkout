@@ -55,25 +55,28 @@ const deviceSchema = new mongoose.Schema({
         required: true,
         trim: true,
     },
-    assignedToTask: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'task',
+    availability: {
+        type: Boolean,
+        default: true,
     },
-    // history:[{
-    //     owner: {
-    //         type: mongoose.Schema.Types.ObjectId,
-    //         ref: 'user'
-    //     },
-    //     checkedOutAt:{
-    //         type: Date
-    //     },
-    //     checkedInAt:{
-    //         type: Date
-    //     }
-    // }],
+    history:[{
+        owner: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'user'
+        },
+    }],
 }, {
     timestamps: true
 })
+
+deviceSchema.methods.addCurrentDeviceOwner = async function (owner) {
+    const device = this
+
+    device.history = device.history.concat({ owner })
+    await device.save()
+    
+    return device
+}
 
 const Device = mongoose.model('Device', deviceSchema)
 
