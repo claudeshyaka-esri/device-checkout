@@ -18,11 +18,12 @@ router.post('/devices', async (req, res) => {
 
 // devices reading endpoint
 // GET /devices?location=redlands
+// GET /devices?deviceType=smartphones
+// GET /devices?name=iphone10
 // GET /devices?limit=10&skip=0
 router.get('/devices', async (req, res) => {
     const match = {}
 
-    //match.location = req.query.location === '' ?  :
     if(req.query.location){
         match.location = req.query.location
     }

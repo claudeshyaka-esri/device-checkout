@@ -3,10 +3,13 @@ const validator = require('validator')
 
 const deviceSchema = new mongoose.Schema({
     assetNumber: {
-        type: String
+        type: String,
+        required: true
     },
-    unitNumber: {
-        type: String
+    serialNumber: {
+        type: String,
+        required: true,
+        trim: true,
     },
     deviceType: {
         type: String,
@@ -21,6 +24,10 @@ const deviceSchema = new mongoose.Schema({
     operatingSystem:{
         type: String, 
         trim: true,
+    },
+    memory: {
+        type: Number,
+        default: null,
     },
     hasBluetooth: {
         type: Boolean,
@@ -38,14 +45,9 @@ const deviceSchema = new mongoose.Schema({
         type: Boolean,
         default: false,
     },
-    memory: {
-        type: Number,
-        default: null,
-    },
-    serialNumber: {
+    unitNumber: {
         type: String,
-        required: true,
-        trim: true,
+        default: 'xxx-xxx-xxxx',
     },
     location: {
         type: String,
