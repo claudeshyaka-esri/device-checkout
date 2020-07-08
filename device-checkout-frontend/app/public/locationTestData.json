@@ -1,0 +1,22 @@
+{
+  "locations": [
+    {
+      "name": "Redlands",
+      "numOfDevices": 40,
+      "image": "one-tree.jpg",
+      "imageAlt": "photo by Mitchell Luo on Unsplash"
+    },
+    {
+      "name": "Charlotte",
+      "numOfDevices": 25,
+      "image": "charlotte.jpg",
+      "imageAlt": "photo by Wil Amani from Unsplash"
+    },
+    {
+      "name": "Norus",
+      "numOfDevices": 10,
+      "image": "norus.jpg",
+      "imageAlt": "photo by Barth Bailey from Unsplash"
+    }
+  ]
+}
