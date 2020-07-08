@@ -36,9 +36,6 @@ const NavBar = (props) => {
               <NavLink href="/">All</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Home</NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink href="/">Smartphones</NavLink>
             </NavItem>
             <NavItem>

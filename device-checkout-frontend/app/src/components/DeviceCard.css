@@ -1,0 +1,12 @@
+div {
+  cursor: pointer;
+}
+
+p {
+  text-align: center;
+}
+
+.card-custom {
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
